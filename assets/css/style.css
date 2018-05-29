@@ -1,0 +1,37 @@
+
+#search-bar {
+    width: calc( 100% - 82px );
+}
+
+.tile {
+    width: 200px;
+    height: 200px;
+}
+
+h4 {
+    color: white;
+}
+
+#fruits {
+    background-color: orange;
+}
+
+#vegetables {
+    background-color: green;
+}
+
+#grains {
+    background-color: brown;
+}
+
+#dairy {
+    background-color: blue;
+}
+
+#meat {
+    background-color: red;
+}
+
+#spices {
+    background-color: yellow;
+}
