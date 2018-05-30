@@ -1,11 +1,34 @@
 
+.navbar {
+    background-color: darkgray;
+    color: white;
+}
+
+.container-fluid {
+    background-color: lightgrey;
+}
 #search-bar {
     width: calc( 100% - 82px );
+}
+.btn {
+    background-color: darkgray;
+    color: black;
+}
+
+
+.btn:hover {
+    box-shadow: 0 5px 10px 0;
+    background-color: darkgray;
 }
 
 .tile {
     width: 200px;
     height: 200px;
+    border-radius: 20px;
+
+}
+.tile:hover {
+    box-shadow: 0 10px 15px 0;
 }
 
 h4 {
@@ -14,24 +37,75 @@ h4 {
 
 #fruits {
     background-color: orange;
+    background-image:url('../images/fruit.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position-x: center;
+    background-position-y: center;
 }
 
 #vegetables {
     background-color: green;
+    background-image:url('../images/veg2.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position-x: center;
+    background-position-y: center;
+
 }
 
 #grains {
     background-color: brown;
+    background-image:url('../images/grains.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position-x: center;
+    background-position-y: center;
+
 }
 
 #dairy {
     background-color: blue;
+    background-image:url('../images/milk.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position-x: center;
+    background-position-y: center;
 }
 
 #meat {
     background-color: red;
+    background-image:url('../images/meat2.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position-x: center;
+    background-position-y: center;
 }
 
 #spices {
     background-color: yellow;
+    background-image:url('../images/herbspice.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.expandTab {
+    padding:20px;
+    color: white;
+}
+/*clear floats after columns*/
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* closable button inside the container tab*/
+.closebtn {
+    float: right;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
 }

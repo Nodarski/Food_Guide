@@ -1,3 +1,4 @@
+$(document).ready(function() {
 console.log('hello world');
 
 var config = {
@@ -15,6 +16,15 @@ firebase.initializeApp(config);
 
 console.log(rootRef)
 
+function openTab(fruits) {
+  var i, x;
+  x + document.getElementsByClassName("expandTab");
+  for (i=0; i < x.length; i++) {
+    x[i].style.display= "none";
+  }
+  document.getElementById(fruits).style.display ="block";
+}
+
 
   // var title = "space+jam";
   //   var queryURL = "https://www.omdbapi.com/?t=" + title + "&y=&plot=short&apikey=trilogy";
@@ -26,4 +36,4 @@ console.log(rootRef)
   //     console.log(response);
   //     console.log(response.Runtime);
   //   });
-
+}
