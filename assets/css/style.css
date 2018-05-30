@@ -8,7 +8,7 @@
     background-color: lightgrey;
 }
 #search-bar {
-    width: calc( 100% - 82px );
+    width: calc( 100% - 85px );
 }
 .btn {
     background-color: darkgray;
