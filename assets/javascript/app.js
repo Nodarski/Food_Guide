@@ -1,4 +1,5 @@
 
+
 var database = firebase.database();
 var rootRef = firebase.database().ref();
 var newUser = rootRef.push();
@@ -12,6 +13,15 @@ auth.createUserWithEmailAndPassword(email, pass);
 auth.onAuthStateChanged(firebaseUSer => {});
 
 
+
+function openTab(fruits) {
+  var i, x;
+  x + document.getElementsByClassName("expandTab");
+  for (i=0; i < x.length; i++) {
+    x[i].style.display= "none";
+  }
+  document.getElementById(fruits).style.display ="block";
+}
 
 
 
@@ -29,10 +39,3 @@ console.log(rootRef)
   //   });
 
 
-  function testFun(){
-    newUser.set({
-      name: userName,
-      
-    });
-  }
-  testFun();
