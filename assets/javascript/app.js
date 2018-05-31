@@ -31,16 +31,18 @@ function openTab(fruits) {
 
 var edamamAppID = 'd5b34925';
 var edamamAPIkey = '66d13e8235fc1808e58f2957a01df7f8';
-var edamamSearch = '';
-var edamamQuery = 'https://api.edamam.com/api/food-database/parser?ingr=' + edamamSearch + '&app_id=' + edamamAppID + '&app_key=' + edamamAPIkey;
+var edamamFoodSearch = '';
 
-$('#search-area').on('click', 'search-button', function() {
+$('#search-area').on('click', '#search-button', function() {
   event.preventDefault();
-  edamamSearch = encodeURIComponent($('#search-bar').value.trim());
-  $.ajax({
-    url: edamamQuery,
-    method: 'GET'
-  }).then(function(response) {
-    console.log(response);
-  })
+  edamamFoodSearch = encodeURIComponent($('#search-bar').val().trim());
+  var edamamFoodQuery = 'https://api.edamam.com/api/food-database/parser?ingr=' + edamamSearch + '&app_id=' + edamamAppID + '&app_key=' + edamamAPIkey;
+    $.ajax({
+      url: edamamQuery,
+      method: 'GET'
+    }).then(function(response) {
+      console.log(response);
+    });
 });
+
+var edamamRecipeQuery = 'https://api.edamam.com/search?'
