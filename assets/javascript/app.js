@@ -6,11 +6,14 @@ var rootRef = firebase.database().ref();
 var newUser = rootRef.push();
 var userName = "test"
 
+var email = "placeholder@email.com"
+var pass = "randomPass"
+
 console.log(rootRef)
 
 const auth = firebase.auth();
 
-auth.signinWithEmailAndPassword(email, pass);
+//auth.signinWithEmailAndPassword(email, pass);
 auth.createUserWithEmailAndPassword(email, pass);
 
 auth.onAuthStateChanged(firebaseUSer => {});
