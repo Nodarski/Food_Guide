@@ -55,7 +55,7 @@
         </div>
         <div class='row'>
           <div class='col d-flex flex-wrap'>
-            <div class='m-3 p-3 tile d-flex' id='fruits'>
+            <div class='m-3 p-3 tile d-flex' id='fruits' onclick="openTab('b1')">
               <h4 class='m-auto'>Fruits</h4>
             </div>
             <div class='m-3 p-3 tile d-flex'id='vegetables'>
@@ -74,6 +74,12 @@
               <h4 class='m-auto'>Spices</h4>
             </div>
           </div>
+          <!--full-width columns (hidden by default)-->
+          <div id="b1" class="expandTab" style="display:none;background: orange">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <h4>Fruits</h4>
+            <ul>alkjiej;najknan</ul>
+          </div>
           <div class='footer fixed-bottom  bg bg-dark text-white d-flex'>
             <h5 class='mx-auto my-3'>Footer</h5>
           </div>
@@ -86,10 +92,23 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyB7qlfahOZn3WCoXsne0WY26Z-dE2N_m1U",
+      authDomain: "ultimate-food-guide.firebaseapp.com",
+      databaseURL: "https://ultimate-food-guide.firebaseio.com",
+      projectId: "ultimate-food-guide",
+      storageBucket: "",
+      messagingSenderId: "674703006763"
+    };
+    firebase.initializeApp(config);
+    </script>
 
     <!-- Custom JS -->
-    <script src="assets/javascript/app.js"></script>
-
+    <script src='assets/javascript/app.js'></script>
   </body>
 </html>
