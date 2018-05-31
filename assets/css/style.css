@@ -3,6 +3,15 @@
     background-color: darkgray;
     color: white;
 }
+.navbar-brand {
+    font-size: 30px;
+    
+}
+
+#username-bar {
+    font-size: 15px;
+    font-style: italic;
+}
 
 .container-fluid {
     background-color: lightgrey;
