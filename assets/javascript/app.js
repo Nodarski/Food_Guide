@@ -1,9 +1,12 @@
 
+// Firebase
 
 var database = firebase.database();
 var rootRef = firebase.database().ref();
 var newUser = rootRef.push();
 var userName = "test"
+
+console.log(rootRef)
 
 const auth = firebase.auth();
 
@@ -11,8 +14,6 @@ auth.signinWithEmailAndPassword(email, pass);
 auth.createUserWithEmailAndPassword(email, pass);
 
 auth.onAuthStateChanged(firebaseUSer => {});
-
-
 
 function openTab(fruits) {
   var i, x;
@@ -23,9 +24,7 @@ function openTab(fruits) {
   document.getElementById(fruits).style.display ="block";
 }
 
-
-
-console.log(rootRef)
+// Food Search API
 
 var edamamAppID = 'd5b34925';
 var edamamAPIkey = '66d13e8235fc1808e58f2957a01df7f8';
@@ -42,14 +41,3 @@ $('#search-area').on('click', 'search-button', function() {
     console.log(response);
   })
 });
-
-  //   $.ajax({
-  //     url: queryURL,
-  //     method: "GET"
-  //   })(function(response) {
-  //     console.log(response);
-  //     console.log(response.Runtime);
-  //   });
-
-
-
