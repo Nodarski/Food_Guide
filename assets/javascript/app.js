@@ -4,7 +4,7 @@
 var database = firebase.database();
 var rootRef = firebase.database().ref();
 var newUser = rootRef.push();
-var userName = "test"
+var userName = $("#username-bar")
 
 var email = "placeholder@email.com"
 var pass = "randomPass"
@@ -15,6 +15,7 @@ const auth = firebase.auth();
 
 //auth.signinWithEmailAndPassword(email, pass);
 auth.createUserWithEmailAndPassword(email, pass);
+
 
 auth.onAuthStateChanged(firebaseUSer => {});
 
