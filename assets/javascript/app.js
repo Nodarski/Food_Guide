@@ -43,4 +43,5 @@ $('#search-area').on('click', 'search-button', function() {
   }).then(function(response) {
     console.log(response);
   })
+  
 });

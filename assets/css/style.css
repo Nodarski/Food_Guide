@@ -2,23 +2,57 @@
 .navbar {
     background-color: darkgray;
     color: white;
+    height: 120px;
+    
+}
+
+.navbar-brand {
+    font-size: 40px;
+    font-weight: 700;
+    
+}
+
+#username-bar {
+    font-size: 15px;
+    font-style: italic;
+    height: 30px;
+    width: 120px;
+}
+#password-bar {
+    font-size: 15px;
+    font-style: italic;
+    height: 30px;
+    width: 120px;
+}
+#login, #logout {
+    padding: 2px 8px;
+    vertical-align: center;
+    font-size: 15px;
+    font-style: italic;
+    color: darkgray;
+    border: 1px solid darkgrey;
+     
 }
 
 .container-fluid {
-    background-color: lightgrey;
+    background-color: darkgrey;
 }
 #search-bar {
     width: calc( 100% - 85px );
+    background-color: lightgrey;
+    border: solid 2px darkgray;
 }
-.btn {
+#search-button {
     background-color: darkgray;
     color: black;
+    border: 1px solid black;
 }
+
 
 
 .btn:hover {
     box-shadow: 0 5px 10px 0;
-    background-color: darkgray;
+    background-color: lightgray;
 }
 
 .tile {
@@ -89,6 +123,43 @@ h4 {
     background-size: 50%;
     background-position-x: center;
     background-position-y: center;
+}
+
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: 34%;
+    margin-top: -2.5em;
+    width: 140px;
+    float: right;
+    border: 2px solid darkgrey;
+    background-image: url("../images/linedpaper.jpg");
+    display: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 450px;
+    color: black;
+    z-index: 10;
+    text-align: center;
+    font-family: 'Just Another Hand', Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+
+#recipe-button {
+    position: fixed;
+    right: 10px;
+    bottom: 12%;
+    color: black;
+    border: black solid 1px;
+    font-size: 25px;
+}
+
+
+h5 {
+    font-size: 14px;
+    font-style: italic;
+    color:darkgray;
 }
 
 .expandTab {
