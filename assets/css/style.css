@@ -13,22 +13,22 @@
 }
 
 #username-bar {
-    font-size: 15px;
-    font-style: italic;
-    height: 30px;
+    font-size: 12px;
+    /*font-style: italic;*/
+    height: 25px;
     width: 120px;
 }
 #password-bar {
-    font-size: 15px;
-    font-style: italic;
-    height: 30px;
+    font-size: 12px;
+    /*font-style: italic;*/
+    height: 25px;
     width: 120px;
 }
 #login, #logout {
     padding: 2px 8px;
     vertical-align: center;
-    font-size: 15px;
-    font-style: italic;
+    font-size: 12px;
+    /*font-style: italic;*/
     color: darkgray;
     border: 1px solid darkgrey;
      
@@ -59,10 +59,17 @@
     width: 200px;
     height: 200px;
     border-radius: 20px;
-
+    box-shadow: 0 10px 15px 0;
+    /*transition: width 0.3s ease-in-out;
+    -webkit-transition: width 0.3s ease-in-out;*/
+    transition: height 0.3s ease-in-out;
+    -webkit-transition: height 0.3s ease-in-out;*/
 }
 .tile:hover {
-    box-shadow: 0 10px 15px 0;
+    box-shadow: 0 10px 15px 0 white;
+    /*width: 400px;*/
+    height: 500px;
+
 }
 
 h4 {
@@ -77,6 +84,10 @@ h4 {
     background-position-x: center;
     background-position-y: center;
 }
+#fruits:hover {
+    background-image: none;
+
+}
 
 #vegetables {
     background-color: green;
@@ -86,6 +97,9 @@ h4 {
     background-position-x: center;
     background-position-y: center;
 
+}
+#vegetables:hover {
+    background-image: none;
 }
 
 #grains {
@@ -97,6 +111,9 @@ h4 {
     background-position-y: center;
 
 }
+#grains:hover {
+    background-image: none;
+}
 
 #dairy {
     background-color: blue;
@@ -105,6 +122,9 @@ h4 {
     background-size: 50%;
     background-position-x: center;
     background-position-y: center;
+}
+#dairy:hover {
+    background-image: none;
 }
 
 #meat {
@@ -115,6 +135,9 @@ h4 {
     background-position-x: center;
     background-position-y: center;
 }
+#meat:hover {
+    background-image: none;
+}
 
 #spices {
     background-color: yellow;
@@ -124,6 +147,10 @@ h4 {
     background-position-x: center;
     background-position-y: center;
 }
+#spices:hover {
+    background-image: none;
+}
+
 
 .sidebar {
     position: fixed;
@@ -142,7 +169,7 @@ h4 {
     z-index: 10;
     text-align: center;
     font-family: 'Just Another Hand', Helvetica, sans-serif;
-    font-size: 25px;
+    font-size: 25px; 
 }
 
 
