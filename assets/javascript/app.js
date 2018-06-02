@@ -30,19 +30,32 @@ function openTab(fruits) {
 
 // Food Search API
 
-var edamamAppID = 'd5b34925';
-var edamamAPIkey = '66d13e8235fc1808e58f2957a01df7f8';
-var edamamSearch = '';
-var edamamQuery = 'https://api.edamam.com/api/food-database/parser?ingr=' + edamamSearch + '&app_id=' + edamamAppID + '&app_key=' + edamamAPIkey;
+var edamamAppID = '24041931';
+var edamamAPIkey = 'b2daf41cdcd9d9cbf667f4176e7bea92';
+var edamamFoodSearch = '';
 
-$('#search-area').on('click', 'search-button', function() {
+$('#search-area').on('click', '#search-button', function() {
   event.preventDefault();
-  edamamSearch = encodeURIComponent($('#search-bar').value.trim());
-  $.ajax({
-    url: edamamQuery,
-    method: 'GET'
-  }).then(function(response) {
-    console.log(response);
-  })
-  
+  edamamFoodSearch = encodeURIComponent($('#search-bar').val().trim());
+  var edamamFoodQuery = "https://api.edamam.com/api/nutrition-data?app_id=" + edamamAppID + "&app_key=" + edamamAPIkey + "&ingr=" + edamamFoodSearch;
+      $.ajax({
+      url: edamamFoodQuery,
+      method: 'GET'
+    }).then(function(response) {
+      console.log(response);
+    });
 });
+
+function onLoadFunctions(){
+  $("#foodLogo").animate({
+    left: "15.5%"
+  },400).fadeIn();
+  $("#tacularLogo").animate({
+    left: "48.5%"
+  },400);
+  $("#logoBackPlate").animate({
+    opacity: "1"
+  
+  });
+
+}
