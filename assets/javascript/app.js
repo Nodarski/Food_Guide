@@ -1,6 +1,5 @@
 
 // Firebase
-
 var database = firebase.database();
 var rootRef = firebase.database().ref();
 var newUser = rootRef.push();
