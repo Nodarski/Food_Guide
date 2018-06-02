@@ -60,15 +60,15 @@
     height: 200px;
     border-radius: 20px;
     box-shadow: 0 10px 15px 0;
-    /*transition: width 0.3s ease-in-out;
-    -webkit-transition: width 0.3s ease-in-out;*/
-    transition: height 0.3s ease-in-out;
+    transition: width 0.7s ease-in-out;
+    -webkit-transition: width 0.7s ease-in-out;
+   /*transition: height 0.3s ease-in-out;
     -webkit-transition: height 0.3s ease-in-out;*/
 }
-.tile:hover {
+.hoverTile:hover {
     box-shadow: 0 10px 15px 0 white;
-    /*width: 400px;*/
-    height: 500px;
+    width: 80%;
+    /*height: 500px;*/
 
 }
 
