@@ -180,3 +180,55 @@ h5 {
     font-size: 35px;
     cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#logoAnim{
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+#logoBackPlate {
+    opacity: 0;
+    position: relative;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 280px;
+    height: 100%;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+#foodLogo {
+    width: 40%;
+    position: absolute;
+		top: 0px;
+		left: 0;
+}
+
+#tacularLogo {
+    width: 40%;
+    position: absolute;
+		top: 0px;
+		right: 0;
+}
