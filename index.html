@@ -1,224 +1,186 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Reset CSS -->
-    <link rel="stylesheet" href="assets/css/reset.css">
+<!-- Reset CSS -->
+		<link rel="stylesheet" href="assets/css/reset.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- Custom CSS -->
+		<link rel="stylesheet" href="assets/css/style.css">
+<!--font style-->
+		<link href='http://fonts.googleapis.com/css?family=Just+Another+Hand' rel='stylesheet' type='text/css'>
+		<title>
+			Food App
+		</title>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a contenteditable class="navbar-brand" href="#">
+<!-- <img src="assets/images/logo.svg"> -->
+				<span style="color: red">F</span><span style="color:green">O</span><span style="color:blue">O</span><span 
+					style="color:brown">D</span>tacular
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="homepage.html">
+							Home 
+							<span class="sr-only">
+								(current)
+							</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							Link
+						</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Dropdown
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">
+								Action
+							</a>
+							<a class="dropdown-item" href="#">
+								Another action
+							</a>
+							<div class="dropdown-divider">
+							</div>
+							<a class="dropdown-item" href="#">
+								Something else here
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<form class="nav-item d-flex flex-row">
+				<input class="form-control mr-2 ml-auto" id='username-bar' type="input" placeholder="Username" aria-label="username">
+				<input class="form-control mr-2 ml-auto" id='password-bar' type="input" placeholder="Password" aria-label="Password">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="login">
+					Login
+				</button>
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="logout">
+					Logout
+				</button>
+			</form>
+		</nav>
+		<div class='container-fluid'>
+			<div class='row'>
+				<div class='m-4 p-3 col-sm-4 tile d-flex' id="searchBox">
+					<div>
+						<h4>
+							Tell us what ingredients you have!
+						</h4>
+					</div>
+					<form class="form-inline my-2" id='search-area'>
+						<input class="form-control mr-2" id='search-bar' type="search" placeholder="Search..." aria-label="Search">
+						<button class="btn btn-outline-success my-2" id='search-button' type="submit">
+							Search
+						</button>
+					</form> 
+				</div>
+				<div class='m-3 p-3 tile d-flex hoverThis' id='fruits' onclick="openTab('b1')">
+					<h4 class='m-auto'>
+						Fruits
+					</h4>
+				</div>
+				<div class='m-3 p-3 tile  d-flex hoverThis'id='vegetables'>
+					<h4 class='m-auto'>
+						Vegetables
+					</h4>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='m-3 p-3 hoverThis tile d-flex' id='grains'>
+					<h4 class='m-auto'>
+						Grains
+					</h4>
+				</div>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+				<div class='m-3 p-3 tile d-flex hoverThis' id='dairy'>
+					<h4 class='m-auto'>
+						Dairy
+					</h4>
+				</div>
 
-    <!--font style-->
-    <link href='http://fonts.googleapis.com/css?family=Just+Another+Hand' rel='stylesheet' type='text/css'>
+				<div class='m-3 p-3 tile d-flex hoverThis' id='meat'>
+					<h4 class='m-auto'>
+						Meat
+					</h4>
+				</div>
 
-
-    <title>Food App</title>
-  </head>
-  <body>
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-          <a contenteditable class="navbar-brand" href="#">
-            <!-- <img src="assets/images/logo.svg"> -->
-              <span style="color: red">F</span><span style="color:green">O</span><span style="color:blue">O</span><span style="color:brown">D</span>tacular
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-             <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="homepage.html">
-                            Home 
-                            <span class="sr-only">
-                              (current)
-                            </span>
-                        </a>
-
-                    </li>
-                    <li class="nav-item">
-                       <a class="nav-link" href="#">
-                         Link
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           Dropdown
-                        </a>
-                       
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">
-                                Action
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                Another action
-                            </a>
-                            <div class="dropdown-divider">
-                            </div>
-                            <a class="dropdown-item" href="#">
-                                Something else here
-                            </a>
-                        </div>
-
-                    </li>
-
-                </ul>
-          </div>
-          <form class="nav-item d-flex flex-row">
-
-              <input class="form-control mr-2 ml-auto" id='username-bar' type="input" placeholder="Username" aria-label="username">
-              <input class="form-control mr-2 ml-auto" id='password-bar' type="input" placeholder="Password" aria-label="Password">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="login">
-                  Login
-              </button>
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="logout">
-                  Logout
-              </button>
-          </form>
-
-      </nav>
-          
-      <div class='container-fluid'>
-      <div class='row'>
-          <div class='m-4 p-3 col-sm-4 tile d-flex' id="searchBox">
-             <div>
-                  <h4>
-                      Tell us what ingredients you have!
-                  </h4>
-              </div>
-           
-             <form class="form-inline my-2" id='search-area'>
-                  <input class="form-control mr-2" id='search-bar' type="search" placeholder="Search..." aria-label="Search">
-                  <button class="btn btn-outline-success my-2" id='search-button' type="submit">
-                    Search
-                  </button>
-             </form> 
-          
-          </div>
-            <div class='m-3 p-3 tile d-flex hoverThis' id='fruits' onclick="openTab('b1')">
-              <h4 class='m-auto'>
-                Fruits
-              </h4>
-            </div>
-            <div class='m-3 p-3 tile  d-flex hoverThis'id='vegetables'>
-              <h4 class='m-auto'>
-                Vegetables
-              </h4>
-            </div>
-       </div>
-         <div class='row'> 
-        <div class='m-3 p-3 tile d-flex hoverThis' id='grains'>
-
-  <div class='container-fluid'>
-    <div class='row'>
-      <div class='col'>
-        <form class="form-inline my-2" id='search-area'>
-          <input class="form-control mr-2" id='search-bar' type="search" placeholder="Search" aria-label="Search">
-
-
-          <button class="btn btn-outline-success my-2" id='search-button' type="submit">
-            Search
-          </button>
-
-        </form>
-      </div>
-    </div>
-    <div class='row'>
-      <div class='col d-flex flex-wrap'>
-        <div class='m-3 p-3 hoverTile tile d-flex' id='fruits' onclick="openTab('b1')">
-          <h4 class='m-auto'>
-            Fruits
-          </h4>
-        </div>
-        <div class='m-3 p-3 hoverTile tile d-flex'id='vegetables'>
-          <h4 class='m-auto'>
-            Vegetables
-          </h4>
-        </div>
-        <div class='m-3 p-3 hoverTile tile d-flex' id='grains'>
-          <h4 class='m-auto'>
-            Grains
-          </h4>
-        </div>
-
-        <div class='m-3 p-3 tile d-flex hoverThis' id='dairy'>
-
-          <h4 class='m-auto'>
-            Dairy
-          </h4>
-        </div>
-
-        <div class='m-3 p-3 tile d-flex hoverThis' id='meat'>
-
-          <h4 class='m-auto'>
-            Meat
-          </h4>
-        </div>
-
-        <div class='m-3 p-3 tile d-flex hoverThis' id='spices'>
-
-          <h4 class='m-auto'>
-            Spices
-          </h4>
-        </div>
-    </div>
-
-      <div class="sidebar">
-        <u>What I have:</u>
-        <button class="btn btn-outline-success my-2" id='recipe-button' type="submit">
-            Find Some<br> Recipes
-          </button>
-
-      </div>
-
+				<div class='m-3 p-3 tile d-flex hoverThis' id='spices'>
+					<h4 class='m-auto'>
+						Spices
+					</h4>
+				</div>
+			</div>
+			
+			<div class="sidebar">
+				<u>
+					What I have:
+				</u>
+				<button class="btn btn-outline-success my-2" id='recipe-button' type="submit">
+					Find Some
+				<br> 
+					Recipes
+				</button>
+			</div>
 <!--full-width columns (hidden by default)-->
-      <div id="b1" class="expandTab" style="display:none;background: orange">
-        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;
-        </span>
-        <h4>
-          Fruits
-        </h4>
-        <ul>
-          alkjiej;najknan
-        </ul>
-      </div>
-      <div class='footer fixed-bottom  bg bg-dark text-white d-flex'>
-        <h5 class='mx-auto my-3'>
-          NVRL Design Team 2018
-        </h5>
-      </div>
-    </div>
-  
+			<div id="b1" class="expandTab" style="display:none;background: orange">
+				<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;
+				</span>
+				<h4>
+					Fruits
+				</h4>
+				<ul>
+					alkjiej;najknan
+				</ul>
+			</div>
+
+			
+			<div class='footer fixed-bottom  bg bg-dark text-white d-flex'>
+				<h5 class='mx-auto my-3'>
+					NVRL Design Team 2018
+				</h5>
+			</div>
+		</div>
+
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
-    <script>
-// Initialize Firebase
-      var config = {
-      apiKey: "AIzaSyB7qlfahOZn3WCoXsne0WY26Z-dE2N_m1U",
-      authDomain: "ultimate-food-guide.firebaseapp.com",
-      databaseURL: "https://ultimate-food-guide.firebaseio.com",
-      projectId: "ultimate-food-guide",
-      storageBucket: "",
-      messagingSenderId: "674703006763"
-      };
-console.log('ABCD');
-      firebase.initializeApp(config);
-    </script>
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+		<script>
+			// Initialize Firebase
+			var config = {
+			apiKey: "AIzaSyB7qlfahOZn3WCoXsne0WY26Z-dE2N_m1U",
+			authDomain: "ultimate-food-guide.firebaseapp.com",
+			databaseURL: "https://ultimate-food-guide.firebaseio.com",
+			projectId: "ultimate-food-guide",
+			storageBucket: "",
+			messagingSenderId: "674703006763"
+			};
+			console.log('ABCD');
+			firebase.initializeApp(config);
+		</script>
 
 <!-- Custom JS -->
-    <script src='assets/javascript/app.js'></script>
-  </body>
+		<script src='assets/javascript/app.js'></script>
+	</body>
 </html>
