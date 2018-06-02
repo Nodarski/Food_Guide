@@ -44,3 +44,17 @@ $('#search-area').on('click', '#search-button', function() {
       console.log(response);
     });
 });
+
+function onLoadFunctions(){
+  $("#foodLogo").animate({
+    left: "15.5%"
+  },400).fadeIn();
+  $("#tacularLogo").animate({
+    left: "48.5%"
+  },400);
+  $("#logoBackPlate").animate({
+    opacity: "1"
+  
+  });
+
+}

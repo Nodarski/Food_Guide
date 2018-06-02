@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--font style-->
+    <link href='http://fonts.googleapis.com/css?family=Just+Another+Hand' rel='stylesheet' type='text/css'>
+
+
+    <title>Food App</title>
+  </head>
+  <body onload="onLoadFunctions();" style="background-color: grey">
+        <div id="mainBody" >
+            <div id="logoAnim">
+                <div id="logoBackPlate">
+                    <img id="foodLogo" src="assets/images/food.svg">
+                    <img id="tacularLogo" src="assets/images/tacular.svg">
+                </div>
+            </div>
+        </div>
+        <a class="nav-link" href="index.html">
+            index.html
+            <span class="sr-only">
+                (current)
+            </span>
+        </a>
+        
+        <div class='m-3 p-3 tile d-flex'id='findFood' href="index.html">
+            <a href="index.html"> 
+                <span class="hyperspan"></span>
+            </a>
+            Tell us what you have
+        </div>
+        <div class='m-3 p-3 tile d-flex'id='findRecipes'>
+                <a href="recipes.html"> 
+                        <span class="hyperspan"></span>
+                    </a>
+            Find recipes
+        </div>
+        <div class='m-3 p-3 tile d-flex'id='myAccount'>
+                <a href="myAccount.html"> 
+                        <span class="hyperspan"></span>
+                    </a>
+            my account
+        </div>
+
+
+      <!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script>
+// Initialize Firebase
+      var config = {
+      apiKey: "AIzaSyB7qlfahOZn3WCoXsne0WY26Z-dE2N_m1U",
+      authDomain: "ultimate-food-guide.firebaseapp.com",
+      databaseURL: "https://ultimate-food-guide.firebaseio.com",
+      projectId: "ultimate-food-guide",
+      storageBucket: "",
+      messagingSenderId: "674703006763"
+      };
+
+      firebase.initializeApp(config);
+    </script>
+
+<!-- Custom JS -->
+    <script src='assets/javascript/app.js'></script>
+  </body>
+</html>

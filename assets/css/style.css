@@ -2,33 +2,74 @@
 .navbar {
     background-color: darkgray;
     color: white;
+    height: 120px;
+    
+}
+
+.navbar-brand {
+    font-size: 40px;
+    font-weight: 700;
+    
+}
+
+#username-bar {
+    font-size: 12px;
+    /*font-style: italic;*/
+    height: 25px;
+    width: 120px;
+}
+#password-bar {
+    font-size: 12px;
+    /*font-style: italic;*/
+    height: 25px;
+    width: 120px;
+}
+#login, #logout {
+    padding: 2px 8px;
+    vertical-align: center;
+    font-size: 12px;
+    /*font-style: italic;*/
+    color: darkgray;
+    border: 1px solid darkgrey;
+     
 }
 
 .container-fluid {
-    background-color: lightgrey;
+    background-color: darkgrey;
 }
 #search-bar {
     width: calc( 100% - 85px );
+    background-color: lightgrey;
+    border: solid 2px darkgray;
 }
-.btn {
+#search-button {
     background-color: darkgray;
     color: black;
+    border: 1px solid black;
 }
+
 
 
 .btn:hover {
     box-shadow: 0 5px 10px 0;
-    background-color: darkgray;
+    background-color: lightgray;
 }
 
 .tile {
     width: 200px;
     height: 200px;
     border-radius: 20px;
-
+    box-shadow: 0 10px 15px 0;
+    /*transition: width 0.3s ease-in-out;
+    -webkit-transition: width 0.3s ease-in-out;*/
+    transition: height 0.3s ease-in-out;
+    -webkit-transition: height 0.3s ease-in-out;*/
 }
 .tile:hover {
-    box-shadow: 0 10px 15px 0;
+    box-shadow: 0 10px 15px 0 white;
+    /*width: 400px;*/
+    height: 500px;
+
 }
 
 h4 {
@@ -43,6 +84,10 @@ h4 {
     background-position-x: center;
     background-position-y: center;
 }
+#fruits:hover {
+    background-image: none;
+
+}
 
 #vegetables {
     background-color: green;
@@ -52,6 +97,9 @@ h4 {
     background-position-x: center;
     background-position-y: center;
 
+}
+#vegetables:hover {
+    background-image: none;
 }
 
 #grains {
@@ -63,6 +111,9 @@ h4 {
     background-position-y: center;
 
 }
+#grains:hover {
+    background-image: none;
+}
 
 #dairy {
     background-color: blue;
@@ -71,6 +122,9 @@ h4 {
     background-size: 50%;
     background-position-x: center;
     background-position-y: center;
+}
+#dairy:hover {
+    background-image: none;
 }
 
 #meat {
@@ -81,6 +135,9 @@ h4 {
     background-position-x: center;
     background-position-y: center;
 }
+#meat:hover {
+    background-image: none;
+}
 
 #spices {
     background-color: yellow;
@@ -89,6 +146,47 @@ h4 {
     background-size: 50%;
     background-position-x: center;
     background-position-y: center;
+}
+#spices:hover {
+    background-image: none;
+}
+
+
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: 34%;
+    margin-top: -2.5em;
+    width: 140px;
+    float: right;
+    border: 2px solid darkgrey;
+    background-image: url("../images/linedpaper.jpg");
+    display: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 450px;
+    color: black;
+    z-index: 10;
+    text-align: center;
+    font-family: 'Just Another Hand', Helvetica, sans-serif;
+    font-size: 25px; 
+}
+
+
+#recipe-button {
+    position: fixed;
+    right: 10px;
+    bottom: 12%;
+    color: black;
+    border: black solid 1px;
+    font-size: 25px;
+}
+
+
+h5 {
+    font-size: 14px;
+    font-style: italic;
+    color:darkgray;
 }
 
 .expandTab {
@@ -108,4 +206,80 @@ h4 {
     color: white;
     font-size: 35px;
     cursor: pointer;
+}
+
+#findFood{
+    background-color: blue;
+    position: relative;
+
+}
+.hyperspan {
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+}
+
+#findRecipes {
+    background-color: red;
+    position: relative;
+
+}
+#myAccount {
+    background-color: yellow;
+    position: relative;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#logoAnim{
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+#logoBackPlate {
+    opacity: 0;
+    position: relative;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 280px;
+    height: 100%;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+#foodLogo {
+    width: 40%;
+    position: absolute;
+		top: 0px;
+		left: 0;
+}
+
+#tacularLogo {
+    width: 40%;
+    position: absolute;
+		top: 0px;
+		right: 0;
 }
