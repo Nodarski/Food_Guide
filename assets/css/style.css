@@ -37,8 +37,9 @@
 .container-fluid {
     background-color: darkgrey;
 }
+/*
 #search-bar {
-    width: calc( 100% - 85px );
+    width: calc(100%-85px);
     background-color: lightgrey;
     border: solid 2px darkgray;
 }
@@ -47,7 +48,10 @@
     color: black;
     border: 1px solid black;
 }
-
+*/
+#search-area{
+    padding-top:20px;
+}
 
 
 .btn:hover {
@@ -238,6 +242,7 @@ h5 {
 #myAccount > *{
     flex:1 100%;
 }
+
 
 
 
