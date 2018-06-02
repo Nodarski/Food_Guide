@@ -59,16 +59,16 @@
     width: 200px;
     height: 200px;
     border-radius: 20px;
-    box-shadow: 0 10px 15px 0;
-    transition: width 0.7s ease-in-out;
-    -webkit-transition: width 0.7s ease-in-out;
-   /*transition: height 0.3s ease-in-out;
-    -webkit-transition: height 0.3s ease-in-out;*/
+    box-shadow: 0 10px 15px 0  black;
+    /*transition: width 0.7s ease-in-out;
+    -webkit-transition: width 0.7s ease-in-out;*/
+    transition: height 0.7s ease-in-out;
+    -webkit-transition: height 0.7s ease-in-out;
 }
 .hoverTile:hover {
     box-shadow: 0 10px 15px 0 white;
-    width: 80%;
-    /*height: 500px;*/
+    /*width: 80%*/;
+    height: 100vh;
 
 }
 
@@ -77,7 +77,8 @@ h4 {
 }
 
 #fruits {
-    background-color: orange;
+    background-color:  orange;
+    
     background-image:url('../images/fruit.png');
     background-repeat: no-repeat;
     background-size: 50%;
@@ -189,27 +190,16 @@ h5 {
     color:darkgray;
 }
 
-.expandTab {
-    padding:20px;
+#findFoodTitle {
+    font-style: Arial, Helvetica, sans-serif;
+    font-size:  20px;
+    font-weight: 400;
     color: white;
-}
-/*clear floats after columns*/
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* closable button inside the container tab*/
-.closebtn {
-    float: right;
-    color: white;
-    font-size: 35px;
-    cursor: pointer;
 }
 
 #findFood{
     background-color: blue;
+    color: white;
     position: relative;
 
 }
@@ -223,34 +213,33 @@ h5 {
 
 #findRecipes {
     background-color: red;
+    color: white;
     position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    display: inline-block;
+    
 
 }
+
+#findRecipeTitle {
+    font-style: Arial, Helvetica, sans-serif;
+    font-size:  20px;
+    font-weight: 400;
+    color: white;
+}
+
 #myAccount {
-    background-color: yellow;
+    background-color: green;
+    
     position: relative;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#findRecipeTitle {
+    font-style: Arial, Helvetica, sans-serif;
+    font-size:  20px;
+    font-weight: 400;
+}
 
 
 #logoAnim{
@@ -282,4 +271,31 @@ h5 {
     position: absolute;
 		top: 0px;
 		right: 0;
+}
+
+
+
+
+
+
+
+
+
+.expandTab {
+    padding:20px;
+    color: white;
+}
+/*clear floats after columns*/
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* closable button inside the container tab*/
+.closebtn {
+    float: right;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
 }
