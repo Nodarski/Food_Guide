@@ -37,8 +37,9 @@
 .container-fluid {
     background-color: darkgrey;
 }
+/*
 #search-bar {
-    width: calc( 100% - 85px );
+    width: calc(100%-85px);
     background-color: lightgrey;
     border: solid 2px darkgray;
 }
@@ -47,7 +48,10 @@
     color: black;
     border: 1px solid black;
 }
-
+*/
+#search-area{
+    padding-top:20px;
+}
 
 
 .btn:hover {
@@ -59,13 +63,13 @@
     width: 200px;
     height: 200px;
     border-radius: 20px;
-    box-shadow: 0 10px 15px 0  black;
-    /*transition: width 0.7s ease-in-out;
-    -webkit-transition: width 0.7s ease-in-out;*/
-    transition: height 0.7s ease-in-out;
-    -webkit-transition: height 0.7s ease-in-out;
+    box-shadow: 0 10px 15px 0;
+    /*transition: width 0.3s ease-in-out;
+    -webkit-transition: width 0.3s ease-in-out;*/
+    transition: height 0.3s ease-in-out;
+    -webkit-transition: height 0.3s ease-in-out;
 }
-.hoverTile:hover {
+.hoverThis:hover {
     box-shadow: 0 10px 15px 0 white;
     /*width: 80%*/;
     height: 100vh;
@@ -221,20 +225,28 @@ h5 {
     
 
 }
+#myAccount {
+    background-color: yellow;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: inherit;
+}
 
 #findRecipeTitle {
-    font-style: Arial, Helvetica, sans-serif;
-    font-size:  20px;
+    font-style: 'Arial', Helvetica, sans-serif;
+    font-size: 20px;
     font-weight: 400;
     color: white;
 }
 
-#myAccount {
-    background-color: green;
-    
-    position: relative;
-
+#myAccount > *{
+    flex:1 100%;
 }
+
+
+
+
 #findRecipeTitle {
     font-style: Arial, Helvetica, sans-serif;
     font-size:  20px;

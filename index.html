@@ -79,12 +79,40 @@
               <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="logout">
                   Logout
               </button>
-              
-
           </form>
 
-          
       </nav>
+          
+      <div class='container-fluid'>
+      <div class='row'>
+          <div class='m-4 p-3 col-sm-4 tile d-flex' id="searchBox">
+             <div>
+                  <h4>
+                      Tell us what ingredients you have!
+                  </h4>
+              </div>
+           
+             <form class="form-inline my-2" id='search-area'>
+                  <input class="form-control mr-2" id='search-bar' type="search" placeholder="Search..." aria-label="Search">
+                  <button class="btn btn-outline-success my-2" id='search-button' type="submit">
+                    Search
+                  </button>
+             </form> 
+          
+          </div>
+            <div class='m-3 p-3 tile d-flex hoverThis' id='fruits' onclick="openTab('b1')">
+              <h4 class='m-auto'>
+                Fruits
+              </h4>
+            </div>
+            <div class='m-3 p-3 tile  d-flex hoverThis'id='vegetables'>
+              <h4 class='m-auto'>
+                Vegetables
+              </h4>
+            </div>
+       </div>
+         <div class='row'> 
+        <div class='m-3 p-3 tile d-flex hoverThis' id='grains'>
 
   <div class='container-fluid'>
     <div class='row'>
@@ -117,22 +145,28 @@
             Grains
           </h4>
         </div>
-        <div class='m-3 p-3 hoverTile tile d-flex' id='dairy'>
+
+        <div class='m-3 p-3 tile d-flex hoverThis' id='dairy'>
+
           <h4 class='m-auto'>
             Dairy
           </h4>
         </div>
-        <div class='m-3 p-3 hoverTile tile d-flex' id='meat'>
+
+        <div class='m-3 p-3 tile d-flex hoverThis' id='meat'>
+
           <h4 class='m-auto'>
             Meat
           </h4>
         </div>
-        <div class='m-3 p-3 hoverTile tile d-flex' id='spices'>
+
+        <div class='m-3 p-3 tile d-flex hoverThis' id='spices'>
+
           <h4 class='m-auto'>
             Spices
           </h4>
         </div>
-      </div>
+    </div>
 
       <div class="sidebar">
         <u>What I have:</u>
@@ -159,7 +193,7 @@
         </h5>
       </div>
     </div>
-  </div>
+  
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -180,7 +214,7 @@
       storageBucket: "",
       messagingSenderId: "674703006763"
       };
-
+console.log('ABCD');
       firebase.initializeApp(config);
     </script>
 
