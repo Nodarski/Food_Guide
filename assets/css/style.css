@@ -63,7 +63,7 @@
     /*transition: width 0.3s ease-in-out;
     -webkit-transition: width 0.3s ease-in-out;*/
     transition: height 0.3s ease-in-out;
-    -webkit-transition: height 0.3s ease-in-out;*/
+    -webkit-transition: height 0.3s ease-in-out;
 }
 .tile:hover {
     box-shadow: 0 10px 15px 0 white;
@@ -229,7 +229,14 @@ h5 {
 #myAccount {
     background-color: yellow;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: inherit;
 
+}
+
+#myAccount > *{
+    flex:1 100%;
 }
 
 
