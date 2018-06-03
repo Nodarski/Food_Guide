@@ -70,9 +70,13 @@
     -webkit-transition: height 0.3s ease-in-out;
 }
 .hoverThis:hover {
+/* hover animations moved to app.js */
+/* hover animations moved to app.js */
+/* hover animations moved to app.js */
+    
     box-shadow: 0 10px 15px 0 white;
     /*width: 80%*/;
-    height: 100vh;
+    /* height: 100vh; */
 
 }
 
