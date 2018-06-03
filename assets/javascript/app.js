@@ -58,3 +58,23 @@ function onLoadFunctions(){
   });
 
 }
+// HOVER FOR TILES
+// HOVER FOR TILES
+// HOVER FOR TILES
+$(".hoverThis").hover(function(){
+// Fill Vertical height animation
+ $(this).animate().css("height","100vh")
+// Scroll page to fit div inside
+ $('html,body').animate({
+  scrollTop: $(this).offset().top},'slow');
+// Add any new animations here
+// Add any new animations here
+
+
+ }, function(){
+  //  this functions resets when 'un-hovered'
+  //  this functions resets when 'un-hovered'
+  $(this).animate().css("height","200px");
+
+ });
+  
