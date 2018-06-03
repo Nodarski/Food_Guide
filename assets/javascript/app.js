@@ -1,4 +1,6 @@
 
+var userIngrList = [];
+
 // Firebase
 
 var database = firebase.database();
@@ -28,22 +30,67 @@ function openTab(fruits) {
 }
 
 // Food Search API
-
-var edamamAppID = '24041931';
-var edamamAPIkey = 'b2daf41cdcd9d9cbf667f4176e7bea92';
-var edamamFoodSearch = '';
+/*
+var foodAppID = 'd5b34925';
+var foodAPIkey = '66d13e8235fc1808e58f2957a01df7f8';
+var foodSearch = '';
 
 $('#search-area').on('click', '#search-button', function() {
   event.preventDefault();
-  edamamFoodSearch = encodeURIComponent($('#search-bar').val().trim());
-  var edamamFoodQuery = "https://api.edamam.com/api/nutrition-data?app_id=" + edamamAppID + "&app_key=" + edamamAPIkey + "&ingr=" + edamamFoodSearch;
-      $.ajax({
-      url: edamamFoodQuery,
+  foodSearch = encodeURIComponent($('#search-bar').val().trim());
+  var foodQuery = 'https://api.edamam.com/api/food-database/parser?app_id=' + foodAppID + '&app_key=' + foodAPIkey + '&ingr=' + foodSearch;
+    $.ajax({
+      url: foodQuery,
       method: 'GET'
     }).then(function(response) {
       console.log(response);
+      for (var i = 0; i < response.hints.length; i++) {
+        var temp = response.hints[i].food.label;
+        if (temp.indexOf(' ') === -1) {
+          var item = $('<h5>').text(temp.toLowerCase());
+          $('#user-ingredients').append(item);
+          userIngrList.push(item.text());
+          console.log(userIngrList);
+          i = response.hints.length;
+        }
+      }
     });
 });
+*/
+
+$('#search-area').on('click', '#search-button', function() {
+  event.preventDefault();
+  var temp = $('#search-bar').val();
+  var item = $('<h5>').text(temp.toLowerCase());
+  $('#user-ingredients').append(item);
+  userIngrList.push(item.text());
+  console.log(userIngrList);
+});
+
+// Recipe Search API
+
+var recipeAppID = 'f5710785';
+var recipeAPIkey = '8392091036762a8454001f22166942cf';
+var recipeSearch = '';
+
+$('.container-fluid').on('click', '#recipe-button', function() {
+  for (var i = 0; i < userIngrList.length; i++) {
+    var temp = userIngrList[i] + ' '
+    recipeSearch += temp;
+  }
+  recipeSearch = encodeURIComponent(recipeSearch.trim());
+  console.log(recipeSearch);
+  var recipeQuery = 'https://api.edamam.com/search?app_id=' + recipeAppID + '&app_key=' + recipeAPIkey + '&q=' + recipeSearch;
+  $.ajax({
+    url: recipeQuery,
+    method: 'GET'
+  }).then(function(response) {
+    console.log(response);
+    console.log(recipeQuery);
+  });
+});
+
+// Logo
 
 function onLoadFunctions(){
   $("#foodLogo").animate({
