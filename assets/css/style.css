@@ -105,7 +105,17 @@ h4 {
     background-size: 50%;
     background-position-x: center;
     background-position-y: center;
+    z-index: 1;
 
+}
+#vegetablesContent {
+    width: 80%;
+    height:80vh;
+    background-color: green;
+    margin-top: -35px;
+        z-index: 2;
+    display: none;
+    border-radius: 20px;
 }
 #vegetables:hover {
     background-image: none;

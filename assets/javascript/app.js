@@ -64,7 +64,14 @@ function onLoadFunctions(){
 // HOVER FOR TILES
 $(".hoverThis").hover(function(){
 // Fill Vertical height animation
- $(this).animate().css("height","100vh")
+ $(".hoverThis").animate().css("height","90px")
+ $(this).css({
+   "height" : "100vh",
+   "border-bottom-left-radius" : "0px",
+   "border-bottom-right-radius" : "0px", 
+  });
+  // var contBox = $(this).attr("id")+"Content"
+  // $("#"+contBox).css("display", "block");
 // Scroll page to fit div inside
  $('html,body').animate({
   scrollTop: $(this).offset().top},'slow');
@@ -75,7 +82,11 @@ $(".hoverThis").hover(function(){
  }, function(){
   //  this functions resets when 'un-hovered'
   //  this functions resets when 'un-hovered'
-  $(this).animate().css("height","200px");
+  $(this).css({
+    "border-bottom-left-radius" : "20px",
+    "border-bottom-right-radius" : "20px", 
+   });
+  $(".hoverThis").animate().css("height","200px");
 
  });
   
